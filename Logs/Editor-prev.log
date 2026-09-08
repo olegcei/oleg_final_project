@@ -1,16 +1,54 @@
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 39852)
+VBCSCompiler prewarm took 11.07 ms
 [Licensing::Module] Trying to connect to existing licensing client channel...
-Built from '6000.5/staging' branch; Version is '6000.5.2f1 (eb73d3b415a1) revision 15430611'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-olegt" at "2026-09-08T12:31:39.8062893Z"
+Built from '6000.6/respin/6000.6.0f1-fa21a270ab12' branch; Version is '6000.6.0f1 (f7f8ed4d1e24) revision 16251117'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 31980 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-olegt" at "2026-07-21T11:23:10.3367873Z"
 BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-07-21T11:23:10Z
+Date: 2026-09-08T12:31:39Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 22640, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              02f2b235c0324f0a917bc920c9462fc8
+  Correlation Id:          767245fe58f51deee09180386f546511
+  External correlation Id: 9160312726231353385
+  Machine Id:              TiT2tONqyaWusFlb+GBjGIX2nEk=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-olegt" (connect: 0.00s, validation: 0.00s, handshake: 0.06s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-olegt-notifications" at "2026-09-08T12:31:39.8664572Z"
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated the access token wyLT1n0tGJ...
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-Q75W-G8CW-QZK8-28CR-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 6872860262671-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-Q75W-G8CW-QZK8-28CR-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 6872860262671-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Module] Licensing Background thread has ended after 0.09s
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\6000.5.2f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe
 -projectpath
-C:\Users\olegt\Desktop\CEI\Modulo 4 programacion\Oleg_T_final_project\Oleg_T_final_project
+C:\Users\olegt\Documents\oleg_final_project
 -acceptSoftwareTermsForThisRunOnly
 -useHub
 -hubIPC
@@ -19,11 +57,11 @@ production
 -licensingIpc
 LicenseClient-olegt
 -hubSessionId
-64d63216-6f75-4968-b41a-91e431bd7a25
+7f30cb42-de12-4d03-8867-0939a29cede6
 -accessToken
-cV3xjlVKyCL1yldokS6CemrbKXPOfOyJp5gNMwthr1M006f
-Successfully changed project path to: C:\Users\olegt\Desktop\CEI\Modulo 4 programacion\Oleg_T_final_project\Oleg_T_final_project
-C:/Users/olegt/Desktop/CEI/Modulo 4 programacion/Oleg_T_final_project/Oleg_T_final_project
+wyLT1n0tGJzPWgVlDuh-aJ7XA-70ovzFWkUjTjtyRMY006f
+Successfully changed project path to: C:\Users\olegt\Documents\oleg_final_project
+C:/Users/olegt/Documents/oleg_final_project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
@@ -34,6 +72,7 @@ C:/Users/olegt/Desktop/CEI/Modulo 4 programacion/Oleg_T_final_project/Oleg_T_fin
     "memorysetup-temp-allocator-size-audio-worker=65536"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
     "memorysetup-temp-allocator-size-preload-manager=33554432"
     "memorysetup-allocator-temp-initial-block-size-main=262144"
     "memorysetup-allocator-temp-initial-block-size-worker=262144"
@@ -45,7 +84,7 @@ C:/Users/olegt/Desktop/CEI/Modulo 4 programacion/Oleg_T_final_project/Oleg_T_fin
     "memorysetup-bucket-allocator-block-count=8"
     "memorysetup-main-allocator-block-size=16777216"
     "memorysetup-thread-allocator-block-size=16777216"
-    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
     "memorysetup-gfx-main-allocator-block-size=16777216"
     "memorysetup-gfx-thread-allocator-block-size=16777216"
     "memorysetup-cache-allocator-block-size=4194304"
@@ -60,70 +99,21 @@ C:/Users/olegt/Desktop/CEI/Modulo 4 programacion/Oleg_T_final_project/Oleg_T_fin
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [32692]  Target information:
+Player connection [16552]  Target information:
 
-Player connection [32692]  * "[IP] 26.190.195.171 [Port] 55504 [Flags] 2 [Guid] 3045589519 [EditorId] 3045589519 [Version] 1048832 [Id] WindowsEditor(7,Oleg) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [16552]  * "[IP] 26.190.195.171 [Port] 55504 [Flags] 2 [Guid] 768357079 [EditorId] 768357079 [Version] 1048832 [Id] WindowsEditor(7,Oleg) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [32692]  * "[IP] 192.168.1.215 [Port] 55504 [Flags] 2 [Guid] 3045589519 [EditorId] 3045589519 [Version] 1048832 [Id] WindowsEditor(7,Oleg) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [16552]  * "[IP] 192.168.1.215 [Port] 55504 [Flags] 2 [Guid] 768357079 [EditorId] 768357079 [Version] 1048832 [Id] WindowsEditor(7,Oleg) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [32692] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [32692] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16552] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [16552] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-olegt"
-[Licensing::IpcConnector] LicenseClient-olegt channel disconnected successfully.
-[Licensing::IpcConnector] Channel LicenseClient-olegt-6000.5.2 doesn't exist
-[Licensing::Module] Successfully launched the LicensingClient (PId: 12048)
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-11900" after 0.2 seconds.
-[Licensing::Module] Licensing is not yet initialized.
-Starting IPC server.
-Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-olegt-6000.5.2, press Ctrl-C to exit.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-olegt-6000.5.2" at "2026-07-21T11:23:18.4082223Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 12048, path: "C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
-[Licensing::Module] LicensingClient has failed validation; ignoring
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              0e85c7249cc345baafacce15be66dbce
-  Correlation Id:          23a593c7e06b006d20c65252e7e86450
-  External correlation Id: 3673372310629343166
-  Machine Id:              TiT2tONqyaWusFlb+GBjGIX2nEk=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-olegt-6000.5.2" (connect: 6.56s, validation: 0.33s, handshake: 0.03s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-olegt-6000.5.2-notifications" at "2026-07-21T11:23:18.7692276Z"
-[Licensing::Module] Connected to LicensingClient (PId: 12048, launch time: 0.06, total connection time: 6.92s)
-[Licensing::Client] Successfully updated the access token
-[Licensing::Module] Successfully updated the access token cV3xjlVKyC...
+[Package Manager] Connected to IPC stream "Upm-9664" after 0.4 seconds.
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
-  Id: F4-UVX7-EVAX-XX3D-F2A3-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 6872860262671-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-UVX7-EVAX-XX3D-F2A3-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
-  Id: 6872860262671-UnityPersXXXX
-  Product: Unity Personal
-  Type: Assigned
-  Expiration: Unlimited
-[Licensing::Module] Licensing Background thread has ended after 8.47s
-[Licensing::Module] Licensing is initialized (took 6.59s).
-[Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] License group:
-  Id: F4-UVX7-EVAX-XX3D-F2A3-XXXX
+  Id: F4-Q75W-G8CW-QZK8-28CR-XXXX
   Product: Unity Personal
   Type: ULF
   Expiration: Unlimited
@@ -133,19 +123,29 @@ Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-olegt-6000.5.2, p
   Type: Assigned
   Expiration: Unlimited
 Library Redirect Path: Library/
-[Physics::Module] Selected backend.
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: 2a6f5f8b6f3d3c807d2466240b7eb984
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = C:/Users/olegt/Documents/oleg_final_project[Physics::Module] Selected backend.
 [Physics::Module] Name: PhysX
 [Physics::Module] Id: 0xf2b8ea05
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Artifact Garbage Collection - Removed 3 unused hashed content files
-Initialize engine version: 6000.5.2f1 (eb73d3b415a1)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/olegt/Desktop/CEI/Modulo 4 programacion/Oleg_T_final_project/Oleg_T_final_project/Assets
+Unity Data Store running and initialised
+Initialize engine version: 6000.6.0f1 (f7f8ed4d1e24)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/olegt/Documents/oleg_final_project/Assets
 [D3D12 Device Filter] Vendor Name: ATI
 [D3D12 Device Filter] Device Name: AMD Radeon RX 6800S
-[D3D12 Device Filter] Driver Version: 32.0.21043.19003
+[D3D12 Device Filter] Driver Version: 32.0.21045.5002
 [D3D12 Device Filter] Feature Level: 12.2
 [D3D12 Device Filter] Graphics Memory: 8146 MB
 [D3D12 Device Filter] Processor Count: 16
@@ -158,32 +158,367 @@ Direct3D:
     Vendor:          ATI
     VRAM:            8146 MB
     App VRAM Budget: 7378 MB
-    Driver:          32.0.21043.19003
+    Driver:          32.0.21045.5002
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
-Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56900
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.544219 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003785 seconds.
 Native extension for WindowsStandalone target not found
-Starting new worker id: 0 with log in C:/Users/olegt/Desktop/CEI/Modulo 4 programacion/Oleg_T_final_project/Oleg_T_final_project/Logs/AssetImportWorkerHW0.log
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.000 seconds
+Domain Reload Profiling: 1859ms
+	BeginReloadAssembly (201ms)
+		CreateAndSetChildDomain (10ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (118ms)
+	LoadAllAssembliesAndSetupDomain (505ms)
+		LoadAssemblies (186ms)
+		TypeCache.Refresh (331ms)
+			TypeCache.ScanAssembly (312ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (1002ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (153ms)
+			ProcessInitializeOnLoadAttributes (175ms)
+			ProcessInitializeOnLoadMethodAttributes (355ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-Q75W-G8CW-QZK8-28CR-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 6872860262671-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 63 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ai.navigation@2.0.14 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.ai.navigation@134dd6a3b97b)
+    com.unity.collab-proxy@2.13.6 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.collab-proxy@4628d2ba6ea4)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.20.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.visualscripting@1.9.12 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.visualscripting@4edfcc09512f)
+    com.unity.splines@2.9.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.splines@e6e1d5900acc)
+    com.unity.searcher@4.9.5 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.settings-manager@2.1.1 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.settings-manager@0b8638c5ce86)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.cinemachine@6.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.cinemachine@f53aa49b3acc)
+    com.unity.multiplayer.center@2.0.1 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.multiplayer.center@549886182930)
+    com.unity.render-pipelines.universal@17.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.render-pipelines.universal@8457e85b8184)
+    com.unity.test-framework@1.8.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.test-framework@7a3849e09bd0)
+    com.unity.timeline@6.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.timeline@281d5f7e7d7d)
+    com.unity.ugui@2.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.ugui@23caec89ae27)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.render-pipelines.core@2d66c71e606e)
+    com.unity.shadergraph@17.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.shadergraph@ef6135652377)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.mathematics@1.4.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.mathematics@8306a64d0cd6)
+    com.unity.test-framework.performance@6.6.0 (location: C:\Users\olegt\Documents\oleg_final_project\Library\PackageCache\com.unity.test-framework.performance@0a60b857a52e)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.03 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/olegt/Documents/oleg_final_project
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+ExitCode: 0 Duration: 0s412ms
+[ 819/1057  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.36 seconds), 1 items updated, 1057 evaluated
+AssetDatabase: script compilation time: 1.054177s
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 3.39 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.346 seconds
+Domain Reload Profiling: 2839ms
+	BeginReloadAssembly (435ms)
+		DisableScriptedObjects (37ms)
+		CreateAndSetChildDomain (163ms)
+	RebuildCommonClasses (13ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (92ms)
+	LoadAllAssembliesAndSetupDomain (928ms)
+		LoadAssemblies (499ms)
+		TypeCache.Refresh (238ms)
+			TypeCache.ScanAssembly (223ms)
+		AnalyzeDomain (122ms)
+			BuildScriptInfoCaches (106ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1348ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (3ms)
+			BeforeProcessingInitializeOnLoad (155ms)
+			ProcessInitializeOnLoadAttributes (453ms)
+			ProcessInitializeOnLoadMethodAttributes (147ms)
+			AfterProcessingInitializeOnLoad (14ms)
+		AwakeInstancesAfterBackupRestoration (43ms)
+Starting new worker id: 0 with log in C:/Users/olegt/Documents/oleg_final_project/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=489365bfd0384e040a6544481f53a864): Total: 4.901 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2046 ms
+		Asset DB Callback time: managed=60 ms, native=35 ms
+		Scripting: domain reloads=1, domain reload time=1593 ms, compile time=1058 ms, other=106 ms
+		Project Asset Count: scripts=1498, non-scripts=2717
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 38.993ms
+	ApplyChangesToAssetFolders: 1.366ms
+	Scan: 146.846ms
+	Collect global state as custom dependencies: 26.472ms
+	CategorizeScriptCompilationAssets: 61.410ms
+	ProcessAssetsWithTransientArtifactChanges: 118.476ms
+	CategorizeAssets: 83.870ms
+	CompileScripts: 1057.905ms
+	ImportOutOfDateAssets: 1380.141ms (1360.095ms without children)
+		ReloadNativeAssets: 0.056ms
+		UnloadImportedAssets: 0.801ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.938ms
+		ImportSchedulerStart: 18.245ms
+	PostProcessAllAssets: 60.870ms
+		MonoPostProcessAllAssets: 60.752ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 27.813ms
+			SyncVS.PostprocessSyncProject 7.179ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.720ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.521ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.514ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.493ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.784ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.459ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.436ms
+			CinemachineSettings.OnPostprocessAllAssets 0.414ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.388ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.294ms
+			DomainReloadProcessor.OnPostprocessAllAssets 0.286ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.280ms
+	UnloadStreamsBegin: 3.180ms
+	PersistCurrentRevisions: 0.188ms
+	GenerateScriptTypeHashes: 2.483ms
+	GenerateScriptTypeSerializationHashes: 4.373ms
+	Untracked: 1887.339ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Scanning for USB devices : 8.440ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Oleg_T_final_project
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 143642784.
+Loaded scene 'Assets/Scenes/Turret_sewer.unity'
+	Deserialize:            12.078 ms
+	Integration:            257.072 ms
+	Integration of assets:  12.286 ms
+	Thread Wait Time:       0.818 ms
+	Total Operation Time:   282.255 ms
+Unloading 7037 unused Assets / (8.5 MB). Loaded Objects now: 9202.
+Memory consumption went from 0.61 GB to 0.60 GB.
+Total: 19.150400 ms (FindLiveObjects: 0.806500 ms CreateObjectMapping: 0.867000 ms MarkObjects: 11.223200 ms  DeleteObjects: 5.946700 ms)
+
+[LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
+[LAYOUT] About to save layout C:\Users\olegt\Documents\oleg_final_project\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/olegt/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+[MODES] ModeService[default].InitializeCurrentMode
+[MODES] ModeService[default].RaiseModeChanged(default, default)
+This project uses Input Manager, which is marked for deprecation. To manage input in your project, use the <a href="https://docs.unity3d.com/Packages/com.unity.inputsystem@latest">Input System package</a> instead.
+<RI> Initializing input.
+<RI> Input initialized.
+D3D11 device created for Microsoft Media Foundation video decoding.
+[Project] Loading completed in 11.586 seconds
+	Project init time: 				9.109 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.393 seconds
+		Asset Database init time: 		0.421 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			1.938 seconds
+		Unity extensions init time: 	0.055 seconds
+		Asset Database refresh time: 	4.901 seconds
+	Scene opening time: 			2.066 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1788870711366,"processId":9664,"projectLoad":11.5856176,"projectInit":9.1092756,"templateInit":0.0,"packageManagerInit":0.392744,"assetDatabaseInit":0.4206073,"globalIlluminationInit":0.0033733,"assembliesLoad":1.9375741,"unityExtensionsInit":0.0548252,"assetDatabaseRefresh":4.9014839,"sceneOpening":2.0662518}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1788870711366,"processId":9664,"editorVersion":"6000.6.0f1 (f7f8ed4d1e24)","branch":"6000.6/respin/6000.6.0f1-fa21a270ab12","buildType":"Release","platform":"Windows"}
+Worker ready: AssetImportWorkerHW0 0
+[Licensing::Client] Successfully resolved entitlement details
+Created GICache directory at C:/Users/olegt/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.029s, timestamps: [13.587 - 13.615]
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated access token: "wyLT1n0t"... (expires: 2026-09-08T12:33:00Z)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+UPID Received '7b869006-e826-40a1-8a4b-fb1e0a37c8e1'.
+[Licensing::Client] Successfully resolved entitlement details
+Asset Pipeline Refresh (id=8aec3affb90ae504da820da039e481c9): Total: 0.103 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+TrimDiskCacheJob: Current cache size 0mb
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated access token: "B45vOB1Q"... (expires: 2026-09-08T14:32:06Z)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+UPID Received '7b869006-e826-40a1-8a4b-fb1e0a37c8e1'.
+MonoPathRemapper: Attempts to remap: 42411; Successful remaps: 25350
+Serialized file version minimum: 23, current 23
+[LAYOUT] About to save layout C:\Users\olegt\Documents\oleg_final_project\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/olegt/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+AcceleratorClientConnectionCallback - disconnected - :0
+Importing 'GUID: 00000000000000004000000000000000 - Path: ProjectSettings/ProjectSettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 00000000000000004000000000000000' -> (Import Result ID: 'b574027f2b488dc912046db554710afd') in 0.006 seconds [static dependencies only]. Details - ImportResultOutputID=054c890a8f4b6dddbea933bc5e4b7df4 DependenciesID=617226dda7cd09719b33d90df758740e StaticDependenciesID=4122ee23155ab803364da5095862f86b 
+Importing 'GUID: 00000000000000009000000000000000 - Path: ProjectSettings/QualitySettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 00000000000000009000000000000000' -> (Import Result ID: '1234d6af70f66210ce7cfda4e66e8b00') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2a108b3da874f726c62fbe5f12be4a8a DependenciesID=1def488656846da6ef2e03206928b0e0 StaticDependenciesID=a0cf3dfdae99c755d92b7948d1cfcae0 
+Refreshing native plugins compatible for Editor in 3.17 ms, found 4 plugins.
+
+Asset Pipeline Refresh (id=9d7539e5c44789c4a8a0146085776f20): Total: 0.425 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=2 (actual=2, local cache=0, cache server=0)
+		Asset DB Process Time: managed=2 ms, native=245 ms
+		Asset DB Callback time: managed=76 ms, native=100 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1498, non-scripts=2717
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 2
+	ApplyChangesToAssetFolders: 0.173ms
+	Scan: 193.311ms
+	Collect global state as custom dependencies: 0.578ms
+	OnSourceAssetsModified: 1.275ms
+	ProcessAssetsWithTransientArtifactChanges: 0.119ms
+	CategorizeAssets: 33.132ms
+	ImportOutOfDateAssets: 10.937ms (0.239ms without children)
+		ImportManagerImport: 8.839ms (0.962ms without children)
+		ReloadNativeAssets: 0.110ms
+		UnloadImportedAssets: 0.266ms
+		ReloadImportedAssets: 0.121ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.910ms
+		ImportSchedulerStart: 0.570ms
+	PostProcessAllAssets: 172.231ms
+		XRBuildSystem.XRAssetImported 96.063ms
+		MonoPostProcessAllAssets: 75.087ms
+			AssetPostprocessor.OnPostprocessAllAssets 49.010ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 9.428ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 2.297ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.725ms
+			SyncVS.PostprocessSyncProject 1.223ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.892ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.738ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.729ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.712ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.581ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.516ms
+			PostProcessor.OnPostprocessAllAssets 0.480ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.438ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.396ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.365ms
+			AssetEvents.OnPostprocessAllAssets 0.344ms
+			AssetChangedListener.OnPostprocessAllAssets 0.309ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.287ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.277ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.247ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.231ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.187ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.179ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.176ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.145ms
+	PostAssetChangesProfiler: 3.635ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.227ms
+	UnloadStreamsBegin: 2.235ms
+	PersistCurrentRevisions: 0.271ms
+	Untracked: 4.931ms
+
 [Physics::Module] Cleanup current backend.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
-[Licensing::IpcConnector] LicenseClient-olegt-6000.5.2-notifications channel disconnected successfully.
-[Licensing::IpcConnector] LicenseClient-olegt-6000.5.2 channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-olegt-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-olegt channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
 AcceleratorClientConnectionCallback - disconnected - :0
 Cleanup mono
 CodeReloadManager destroyed
-Shut down.
-debugger-agent: Unable to listen on 4160
-Exiting without the bug reporter. Application will terminate with return code 0
+abort_threads: Failed aborting id: 0000000000009430, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000007484, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000009430, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000007484, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 3984
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1788871480096,"processId":9664,"allocatedMemory":16527264,"memoryLabels":[{"Default":222668},{"Permanent":15516},{"NewDelete":73081},{"Thread":4208416},{"Manager":821768},{"VertexData":8},{"Geometry":816},{"Shader":869676},{"Material":24},{"TextureCache":608},{"GfxDevice":63552},{"GfxThread":8448},{"Animation":952},{"Audio":984},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":135608},{"Input":42840},{"JobScheduler":256},{"TextLib":23254},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1271576},{"BaseObject":49232},{"Resource":1208},{"Renderer":2376},{"Transform":4685},{"File":37087},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":317274},{"StaticString":3808},{"Utility":2675014},{"Curl":48},{"PoolAlloc":2360},{"AI":80},{"TypeTree":14869},{"ScriptManager":12640},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7584},{"WebRequest":17552},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":729},{"Secure":265},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":768},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"Gui":268059},{"EditorUtility":151358},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4672014},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":36881},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":260},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3600},{"Windowing":456},{"Licensing":12805},{"AssetReference":32},{"IPCStream":32}]}

@@ -32,7 +32,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void GameStart()
     {
-        final = true;
+        startGame = true;
         StartCoroutine (FadeOut());
     }
 
