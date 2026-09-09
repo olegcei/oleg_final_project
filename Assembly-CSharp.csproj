@@ -53,14 +53,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Torreta\EntradasInput.cs" />
+    <Compile Include="Assets\Scripts\Menu\Menu principal.cs" />
+    <Compile Include="Assets\Scripts\Menu\MovingPanel.cs" />
+    <Compile Include="Assets\Scripts\Grenade\GrenadeLanding.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretController.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Torreta\DecalAutoDestroy.cs" />
-    <Compile Include="Assets\Scripts\MovingPanel.cs" />
-    <Compile Include="Assets\Scripts\Menu principal.cs" />
-    <Compile Include="Assets\Scripts\Torreta\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\Torreta\PlayerMovement.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\EntradasInput.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Hookshot\Hookshot.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretProjectile.cs" />
   </ItemGroup>

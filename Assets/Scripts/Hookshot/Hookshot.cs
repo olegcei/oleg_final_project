@@ -3,34 +3,28 @@ using UnityEngine;
 public class Hookshot : MonoBehaviour
 {
     [Header("References")]
-    public Transform gunTip;        // where the rope visually starts
-    public Transform camTransform;  // player camera
+    public Transform gunTip;
+    public Transform camTransform;
     public LineRenderer lineRenderer;
-    public Rigidbody playerRb;
-    public EntradasInput input;     // NEW - reference to your input script
+    public CharacterController controller; // CHANGED - no more Rigidbody
+    public PlayerMovement playerMovement;  // NEW - to disable it while hooking
+    public EntradasInput input;
 
     [Header("Settings")]
     public float maxHookDistance = 25f;
-    public float pullForce = 30f;
-    public float maxPullSpeed = 20f;
+    public float pullSpeed = 15f;
     public float minDistanceToDetach = 1.5f;
     public string hookableTag = "Hookable";
-    public LayerMask hookableMask; // optional, use instead of/with tag
+    public LayerMask hookableMask;
 
     private Vector3 hookPoint;
     private bool isHooking = false;
-
-    void Awake()
-    {
-        // Prevents the spinning issue from earlier
-        playerRb.freezeRotation = true;
-        playerRb.interpolation = RigidbodyInterpolation.Interpolate;
-    }
 
     void OnEnable()
     {
         input.OnHookshotPressed += TryStartHook;
         input.OnHookshotReleased += StopHook;
+        Debug.Log("Hookshot subscribed to input events");
     }
 
     void OnDisable()
@@ -41,51 +35,37 @@ public class Hookshot : MonoBehaviour
 
     void Update()
     {
-        // Auto-detach when close enough, still needs to run every frame
-        if (isHooking && Vector3.Distance(transform.position, hookPoint) < minDistanceToDetach)
-        {
-            StopHook();
-        }
-
         if (isHooking)
         {
             DrawRope();
-        }
-    }
 
-    void FixedUpdate()
-    {
-        if (isHooking)
-        {
-            PullPlayer();
+            float dist = Vector3.Distance(transform.position, hookPoint);
+            if (dist < minDistanceToDetach)
+            {
+                StopHook();
+                return;
+            }
+
+            Vector3 direction = (hookPoint - transform.position).normalized;
+            controller.Move(direction * pullSpeed * Time.deltaTime);
         }
     }
 
     void TryStartHook()
     {
+        Debug.Log("TryStartHook called");
         RaycastHit hit;
         if (Physics.Raycast(camTransform.position, camTransform.forward, out hit, maxHookDistance, hookableMask))
         {
+            Debug.Log("Raycast hit: " + hit.collider.name);
             if (hit.collider.CompareTag(hookableTag))
             {
+                Debug.Log("Hook successful!");
                 hookPoint = hit.point;
                 isHooking = true;
                 lineRenderer.enabled = true;
+                playerMovement.enabled = false; // NEW - stop normal movement fighting the pull
             }
-        }
-    }
-
-    void PullPlayer()
-    {
-        Vector3 direction = (hookPoint - playerRb.position).normalized;
-
-        // Add force towards hook point
-        playerRb.AddForce(direction * pullForce, ForceMode.Acceleration);
-
-        // Clamp speed so it doesn't get absurd
-        if (playerRb.linearVelocity.magnitude > maxPullSpeed)
-        {
-            playerRb.linearVelocity = playerRb.linearVelocity.normalized * maxPullSpeed;
         }
     }
 
@@ -93,6 +73,7 @@ public class Hookshot : MonoBehaviour
     {
         isHooking = false;
         lineRenderer.enabled = false;
+        playerMovement.enabled = true; // NEW - give control back
     }
 
     void DrawRope()
