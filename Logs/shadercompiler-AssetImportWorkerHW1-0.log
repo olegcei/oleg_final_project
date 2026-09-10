@@ -7,75 +7,82 @@ Cmd: initializeCompiler
 
 Cmd: initializeCompiler
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=2503 file=Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/Scrolling.compute kernel=Scroll ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=2096
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=1854 file=Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/Eviction.compute kernel=Evict ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=2093
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=3319 file=Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/PatchAllocation.compute kernel=Allocate ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=4729
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=2918 file=Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/SpatialFiltering.compute kernel=FilterSpatially ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=6935
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=1392 file=Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/TemporalFiltering.compute kernel=FilterTemporally ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=2789
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=4619 file=Packages/com.unity.render-pipelines.core/Runtime/Lighting/SurfaceCache/Defrag.compute kernel=Defrag ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SUB_GROUP_SIZE_32 SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=6765
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=5293 file=Packages/com.unity.render-pipelines.universal/Runtime/RendererFeatures/SurfaceCacheGIRendererFeature/ScreenResolveLookup.compute kernel=Lookup ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=10432
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=4630 file=Packages/com.unity.render-pipelines.universal/Runtime/RendererFeatures/SurfaceCacheGIRendererFeature/ScreenResolveUpsampling.compute kernel=Upsample ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=4907
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=11375 file=Packages/com.unity.render-pipelines.universal/Runtime/RendererFeatures/SurfaceCacheGIRendererFeature/PatchAllocation.compute kernel=Allocate ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=11487
 
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=9001 file=Packages/com.unity.render-pipelines.universal/Runtime/RendererFeatures/SurfaceCacheGIRendererFeature/Debug.compute kernel=Visualize ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=10404
 
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
-
-Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  insize=5024 file=Packages/com.unity.render-pipelines.universal/Runtime/RendererFeatures/SurfaceCacheGIRendererFeature/FlatNormalResolution.compute kernel=ResolveFlatNormals ppOnly=0 stripLineD=0 buildPlatform=19 km=<UNITY_VERSION=60060000> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=SHADER_STAGE_COMPUTE platform=dx12 flags=0 reqs=50241 toolchain=1
+RunExternalCompiler: begin name=FXC
+RunExternalCompiler: end
+compilerComputeKernel complete
+ ok=1 outsize=3383
 
 Cmd: initializeCompiler
 

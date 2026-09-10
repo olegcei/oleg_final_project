@@ -21,3 +21,11 @@
 *.userprefs
 
 .vs/
+Assets/Assets/Turel.fbx
+Assets/Assets/Turel.fbx.meta
+Assets/Scripts/EntradasInput.cs
+Assets/Scripts/EntradasInput.cs.meta
+Assets/Scripts/PlayerHealth.cs
+Assets/Scripts/PlayerHealth.cs.meta
+Assets/Scripts/PlayerMovement.cs
+Assets/Scripts/PlayerMovement.cs.meta
