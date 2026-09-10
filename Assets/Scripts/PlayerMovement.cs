@@ -56,12 +56,6 @@ public class PlayerMovement : MonoBehaviour
         // Movimiento horizontal.
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
-        // Si nos estamos moviendo, giramos poco a poco hacia esa direccion.
-        if (moveDirection != Vector3.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        }
 
         // Gravedad: en el suelo reiniciamos la caida con un valor pequeño
         // para que el personaje se mantenga pegado al terreno.

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurretProjectile
   speed: 20
   lifeTime: 10
-  damage: 10
+  damage: 1
   impactDecalPrefab: {fileID: 5239614968924779320, guid: 77497d67a10d26c47a7d0b93b035f232, type: 3}
   decalLifetime: 20
   decalScale: 0.001

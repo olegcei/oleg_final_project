@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Torreta\TurretController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Torreta\DecalAutoDestroy.cs" />
+    <Compile Include="Assets\Scripts\CursorManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\EntradasInput.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
