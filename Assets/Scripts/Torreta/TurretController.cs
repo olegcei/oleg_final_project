@@ -21,6 +21,9 @@ public class TurretController : MonoBehaviour
     [Header("Linea de vision")]
     public LayerMask visionMask;      // Capas que TAPAN al jugador (paredes, suelo...). No incluir al jugador.
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+
     private float nextShotTime;         // Momento (en segundos de partida) del siguiente disparo.
 
     private void Start()
@@ -51,6 +54,7 @@ public class TurretController : MonoBehaviour
         // Sin objetivo (o si el jugador se ha destruido) no hay nada que hacer.
         if (target == null)
         {
+            StopAudio();
             return;
         }
 
@@ -59,6 +63,7 @@ public class TurretController : MonoBehaviour
 
         if (distance > attackRange)
         {
+            StopAudio();
             return;
         }
 
@@ -69,6 +74,18 @@ public class TurretController : MonoBehaviour
         {
             Shoot();
             nextShotTime = Time.time + timeBetweenShots;
+        }
+        else if (!HasLineOfSight())
+        {
+            StopAudio();
+        }
+    }
+
+    private void StopAudio()
+    {
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 
@@ -118,6 +135,11 @@ public class TurretController : MonoBehaviour
         {
             Debug.LogWarning("Faltan referencias en la torreta: Projectile Prefab o Fire Point.");
             return;
+        }
+
+        if (audioSource != null && !audioSource.isPlaying)
+        {
+            audioSource.Play();
         }
 
         GameObject newProjectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);

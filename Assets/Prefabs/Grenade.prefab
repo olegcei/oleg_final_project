@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -155,6 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db4cee75c40b2c42b4c6375c49208c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrenadeLanding
-  smokeParticlePrefab: {fileID: 9006614736556918948, guid: e92c31349d6750d4f8bac3ffb6dd795b, type: 3}
+  smokeParticlePrefab: {fileID: 276850766663862819, guid: 9f46098bedbe25e4c8c6990c628506ca, type: 3}
+  explosionPrefab: {fileID: 2826068044083548223, guid: 5b233af704dde3748a81ec02564d207e, type: 3}
   validSurfaceTag: Floor
+  environmentLayer:
+    serializedVersion: 2
+    m_Bits: 512
   destroyDelay: 0.1

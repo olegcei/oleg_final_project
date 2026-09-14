@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;         // Vida actual. Se ve en el Inspector para comprobar que funciona.
     public bool isDead;                 // Se pone a true cuando la vida llega a 0.
 
+    [SerializeField] private BloodSplatterHealthUI bloodUI;
+
     // Awake se ejecuta al principio, antes del primer frame.
     private void Awake()
     {
@@ -29,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
         }
 
         currentHealth = currentHealth - damage;
+
+        bloodUI.UpdateHealth(currentHealth, maxHealth);
 
         // Evitamos que la vida baje de 0.
         if (currentHealth < 0f)

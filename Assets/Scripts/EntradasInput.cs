@@ -15,6 +15,8 @@ public class EntradasInput : MonoBehaviour
     public event Action OnHookshotPressed;
     public event Action OnHookshotReleased;
 
+    public bool salto;
+
     public void Hookshot(InputAction.CallbackContext ctx)
     {
         Debug.Log("Hookshot input received: " + ctx.phase);
@@ -41,4 +43,22 @@ public class EntradasInput : MonoBehaviour
         Vector3 throwDirection = throwPoint.forward * forwardForce + throwPoint.up * upwardForce;
         rb.AddForce(throwDirection, ForceMode.VelocityChange);
     }
+
+    public void Salto(InputAction.CallbackContext callbackContext)
+    {
+        //Si el callbackContext es performed, almacenamos el valor de salto como true
+        if (callbackContext.performed)
+        {
+            //Almacenamos el valor de salto como true
+            salto = true;
+        }
+        else
+            //Si el callbackContext es canceled, almacenamos el valor de salto como false
+            if (callbackContext.canceled)
+            {
+                //Almacenamos el valor de salto como false
+                salto = false;
+            }
+    }
+
 }
