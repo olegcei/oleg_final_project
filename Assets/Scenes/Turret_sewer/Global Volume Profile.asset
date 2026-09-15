@@ -82,10 +82,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.39
+    m_Value: 1.61
   contrast:
     m_OverrideState: 1
-    m_Value: 28.4
+    m_Value: 0.03
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_Value: 0.62
   saturation:
     m_OverrideState: 1
-    m_Value: -18.2
+    m_Value: -6.9
 --- !u!114 &-5543914237113387083
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -146,10 +146,10 @@ MonoBehaviour:
     m_Value: 8
   volumeSize:
     m_OverrideState: 1
-    m_Value: 128
+    m_Value: 512
   volumeResolution:
     m_OverrideState: 1
-    m_Value: 32
+    m_Value: 128
   volumeCascadeCount:
     m_OverrideState: 1
     m_Value: 4
@@ -185,13 +185,53 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.397
+    m_Value: 0.31
   smoothness:
     m_OverrideState: 1
     m_Value: 0.2
   rounded:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &-1929509509736401786
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Tonemapping
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 2
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 1
+    m_Value: 3
+  hueShiftAmount:
+    m_OverrideState: 1
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 1
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 1
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 1
+    m_Value: 1
+  minNits:
+    m_OverrideState: 1
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 1
+    m_Value: 1000
 --- !u!114 &-1516381286411566409
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -213,7 +253,7 @@ MonoBehaviour:
     m_Value: 0.65
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2.06
   scatter:
     m_OverrideState: 1
     m_Value: 0.406
@@ -242,6 +282,22 @@ MonoBehaviour:
   dirtIntensity:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &-475145598497845780
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ChromaticAberration
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.59
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +318,8 @@ MonoBehaviour:
   - {fileID: 7519245956151089051}
   - {fileID: -8919158456356828147}
   - {fileID: 6362963465721431117}
+  - {fileID: -1929509509736401786}
+  - {fileID: -475145598497845780}
 --- !u!114 &6362963465721431117
 MonoBehaviour:
   m_ObjectHideFlags: 3

@@ -48,6 +48,8 @@ public class TurretProjectile : MonoBehaviour
     // Unity llama a este metodo cuando el proyectil choca con algo.
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Proyectil choco con: " + collision.collider.name, collision.collider.gameObject);
+
         // Si ya hemos impactado, ignoramos choques posteriores.
         if (hasImpacted)
         {

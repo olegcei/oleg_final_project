@@ -2,111 +2,87 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] float gravity;   // negativa
-    [SerializeField] float jumpHeight;  // altura que quieres alcanzar
-    public Vector3 velocity; // solo usaremos y para salto/gravedad
+    [SerializeField] float gravity;      // negative value
+    [SerializeField] float jumpHeight;
+    [SerializeField] EntradasInput input; // drag in the same GameObject's EntradasInput
+
+    public Vector3 velocity;
 
     float coyoteTime = 0.1f;
-    public float coyoteTimeCounter;
+    float coyoteTimeCounter;
     public float jumpBufferTime = 0.1f;
-    public float jumpBufferCounter;
+    float jumpBufferCounter;
+
     int jumpsMax = 1;
     int jumpsCount;
     public bool isJumping;
-    public bool jumpCancel;
     bool isGrounded;
 
     CharacterController characterController;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //playerDashScript = GetComponent<PlayerDash>();
         characterController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Detectar suelo en CharacterController
         isGrounded = characterController.isGrounded;
 
-        // Aplicar gravedad acumulada
-        if (velocity.y > -50) velocity.y += gravity * Time.deltaTime;
+        // Buffer the jump the moment the button is pressed
+        if (input.salto)
+        {
+            jumpBufferCounter = jumpBufferTime;
+            input.salto = false; // consume it so it only buffers once per press
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
 
-        if (isGrounded && velocity.y < 0)
+        // Gravity
+        if (velocity.y > -50f) velocity.y += gravity * Time.deltaTime;
+
+        if (isGrounded && velocity.y < 0f)
         {
             coyoteTimeCounter = coyoteTime;
             jumpsCount = jumpsMax;
             isJumping = false;
+            velocity.y = -5.8f; // stick to ground
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        //FixedUpdate para RB
-        if (jumpBufferCounter > 0) //El buffer del salto controla si se salta o no
+        // Jump resolution
+        if (jumpBufferCounter > 0f)
         {
-            if (!isJumping && isGrounded) //Primer salto desde el suelo
-            {
+            if (!isJumping && isGrounded)
                 Salto();
-            }
-            else
-                if (!isJumping && !isGrounded) //Salto desde el precipicio
-                {
-                    if (coyoteTimeCounter > 0f)
-                    {
-                        Salto();
-                    }
-                }
-                else
-                    if (isJumping && jumpsCount > 0)//Saltos a partir del primero //&& (!playerControl.ComprobacionSuelo() || !playerControl.isColliderTopLadder())//
-                    {
-                        Salto();
-                    }
+            else if (!isJumping && !isGrounded && coyoteTimeCounter > 0f)
+                Salto();
+            else if (isJumping && jumpsCount > 0)
+                Salto();
         }
 
-        //Cancela el salto al soltar la tecla o boton
-        if (jumpCancel && !isGrounded)
-        {
-            if (velocity.y > 0 && (jumpBufferCounter + 0.1f) < 0)
-            {
-                velocity.y = 0f;
-                jumpCancel = false;
-            }
-        }
-
-        // Mantener pegado al suelo
-        if (isGrounded && velocity.y < 0f)
-        {
-            velocity.y = -5.8f;
-        }
-
-        if (jumpBufferCounter > -1) jumpBufferCounter -= Time.deltaTime; //Comprobacion de seguridad para no desbordar la variable
+        // Apply movement — this was missing before
+        characterController.Move(velocity * Time.deltaTime);
     }
 
     void Salto()
     {
-        //if (!playerDashScript.isDashJump)
-        //{
         isJumping = true;
         jumpsCount--;
-        velocity.y = 0f;
-
-        // v = sqrt(2 * h * -g)
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-
-        jumpBufferCounter = 0;
-        //}
+        jumpBufferCounter = 0f;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (!isGrounded && velocity.y > 0f)
+        if (hit.normal.y > 0.5f && velocity.y <= 0f)
         {
             isJumping = false;
-            velocity.y = 0f;
         }
     }
 }
