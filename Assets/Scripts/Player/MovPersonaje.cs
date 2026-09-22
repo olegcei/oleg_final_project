@@ -1,13 +1,11 @@
 using UnityEngine;
 
-// Obliga a que el objeto tenga un CharacterController (Unity lo aÃ±ade solo).
-[RequireComponent(typeof(CharacterController))]
-public class PlayerMovement : MonoBehaviour
+public class MovPersonaje : MonoBehaviour
 {
     [Header("Referencias")]
     private SaltoyGravedadPlayer _saltoyGravedadPlayer;
     public CharacterController CharacterController;
-    private EntradasInput _inputControles;
+    private InputsPersonaje _inputControles;
 
     [Header("Movimiento")]
     private Vector3 _direccionFinal;
@@ -18,13 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        // Guardamos el CharacterController una sola vez para no buscarlo cada frame.
+        _saltoyGravedadPlayer = GetComponent<SaltoyGravedadPlayer>();
         CharacterController = GetComponent<CharacterController>();
-
-        _inputControles = GetComponent<EntradasInput>();
+        _inputControles = GetComponent<InputsPersonaje>();
     }
 
-    // Update se ejecuta una vez por frame: aqui leemos el mando/teclado y movemos.
     private void Start()
     {
         CalcularVelocidad();
@@ -35,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         Movimiento();
     }
 
+    //Calculo para el movimiento del player
     private void Movimiento()
     {
         _direccionXZ = new Vector3(_inputControles.inputMovimiento.x, 0, _inputControles.inputMovimiento.y).normalized;
@@ -44,9 +41,9 @@ public class PlayerMovement : MonoBehaviour
         CharacterController.Move(new Vector3(_direccionFinal.x * _velocidadFinal, _direccionFinal.y, _direccionFinal.z * _velocidadFinal) * Time.deltaTime);
     }
 
+    //Calculo de la variación de velocidad del player
     public void CalcularVelocidad()
     {
         _velocidadFinal = _velocidadBase * multiplicadorAlCorrer;
     }
-
 }

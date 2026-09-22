@@ -55,11 +55,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Menu\Menu principal.cs" />
     <Compile Include="Assets\Scripts\Menu\MovingPanel.cs" />
+    <Compile Include="Assets\Scripts\Player\InputsPersonaje.cs" />
     <Compile Include="Assets\Scripts\Grenade\GrenadeLanding.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretController.cs" />
     <Compile Include="Assets\Scripts\BloodSplatter.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\GameManager1.cs" />
     <Compile Include="Assets\Scripts\Torreta\DecalAutoDestroy.cs" />
+    <Compile Include="Assets\Scripts\Player\SaltoyGravedadPlayer.cs" />
+    <Compile Include="Assets\Scripts\repaso clase\Enemigos\EnemyClickMove.cs" />
+    <Compile Include="Assets\Scripts\Player\RayosPersonaje.cs" />
+    <Compile Include="Assets\Scripts\Player\MovCamara.cs" />
+    <Compile Include="Assets\Scripts\Player\MovPersonaje.cs" />
     <Compile Include="Assets\Scripts\SmokeVFX.cs" />
     <Compile Include="Assets\Scripts\CursorManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -67,7 +74,9 @@
     <Compile Include="Assets\Scripts\PlayerJump.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Hookshot\Hookshot.cs" />
+    <Compile Include="Assets\Scripts\Escenario\PlataformasMoviles.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretProjectile.cs" />
+    <Compile Include="Assets\Scripts\repaso clase\Enemigos\IaEnemigo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,11 +1,22 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.6/respin/6000.6.0f1-fa21a270ab12' branch; Version is '6000.6.0f1 (f7f8ed4d1e24) revision 16251117'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-ALUMNOS" at "2026-09-21T16:23:23.8050874Z"
-OS: 'Windows 11  (10.0.26200) Professional' Language: 'es' Physical Memory: 32472 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-olegt" at "2026-09-22T12:09:55.0859237Z"
+OS: 'Windows 11  (10.0.26200) Core' Language: 'en' Physical Memory: 31980 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-09-21T16:23:23Z
+Date: 2026-09-22T12:09:55Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 23248, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              736c368757584113b98a993196932529
+  Correlation Id:          6734b8daed06044b95b4c46fcfe91ee4
+  External correlation Id: 1513760342118561161
+  Machine Id:              TiT2tONqyaWusFlb+GBjGIX2nEk=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-olegt" (connect: 0.00s, validation: 0.01s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-olegt-notifications" at "2026-09-22T12:09:55.1391531Z"
+[Licensing::Module] Licensing Background thread has ended after 0.05s
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe
@@ -15,13 +26,13 @@ C:\Program Files\Unity\Hub\Editor\6000.6.0f1\Editor\Unity.exe
 -name
 AssetImportWorkerHW1
 -projectPath
-C:/Users/ALUMNOS/Documents/oleg_final_project
+C:/Users/olegt/Documents/oleg_final_project
 -logFile
 Logs/AssetImportWorkerHW1.log
 -srvPort
-59045
+59340
 -parentPid
-11308
+10792
 -analyticsCloudUserId
 6872860262671
 -analyticsCloudProjectId
@@ -33,12 +44,12 @@ Logs/AssetImportWorkerHW1.log
 -cbmEditorLicense
 90dc287f4745f84db680bf97908f99b94dba9a54
 -cbmMachineId
-40UgVQrz1fkwWDhtNn0/Xoc4+KU=
+TiT2tONqyaWusFlb+GBjGIX2nEk=
 -licensingIpc
-LicenseClient-ALUMNOS
+LicenseClient-olegt
 -noDiagnosticSwitchPersistentStore
 -job-worker-count
-9
+7
 -background-job-worker-count
 8
 -asset-garbage-collectors
@@ -46,8 +57,8 @@ LicenseClient-ALUMNOS
 -force-d3d12
 -name
 AssetImport
-Successfully changed project path to: C:/Users/ALUMNOS/Documents/oleg_final_project
-C:/Users/ALUMNOS/Documents/oleg_final_project
+Successfully changed project path to: C:/Users/olegt/Documents/oleg_final_project
+C:/Users/olegt/Documents/oleg_final_project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
@@ -85,22 +96,20 @@ C:/Users/ALUMNOS/Documents/oleg_final_project
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [5816]  Target information:
+Player connection [19684]  Target information:
 
-Player connection [5816]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3596623330 [EditorId] 3596623330 [Version] 1048832 [Id] WindowsEditor(7,AULA11-2) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [19684]  * "[IP] 192.168.1.215 [Port] 0 [Flags] 2 [Guid] 2489816858 [EditorId] 2489816858 [Version] 1048832 [Id] WindowsEditor(7,Oleg) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [5816]  * "[IP] 192.168.2.16 [Port] 0 [Flags] 2 [Guid] 3596623330 [EditorId] 3596623330 [Version] 1048832 [Id] WindowsEditor(7,AULA11-2) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
-
-Player connection [5816] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [5816] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 9
+Player connection [19684] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [19684] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
 Library Redirect Path: Library/
 Initialising UDS system complete:
   - System type: Client
-  - Resource namespace: 07dd15e55a3c312114eaec025544b185
+  - Resource namespace: 2a6f5f8b6f3d3c807d2466240b7eb984
   - Shared memory size: 1073741824
   - Command buffer id: 1052576
   - Command buffer size: 8192
@@ -113,49 +122,32 @@ Initialising UDS system complete:
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.43 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.13 ms, found 4 plugins.
 Initialize engine version: 6000.6.0f1 (f7f8ed4d1e24)
 [EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/ALUMNOS/Documents/oleg_final_project/Assets
+[Subsystems] Discovering subsystems at path C:/Users/olegt/Documents/oleg_final_project/Assets
 Forcing GfxDevice: Direct3D 12
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 d3d12: failed to query info queue interface (0x80004002).
 Direct3D:
     Version:         Direct3D 12 [level 12.2]
-    Renderer:        NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
-    Vendor:          NVIDIA
-    VRAM:            5996 MB
-    App VRAM Budget: 5228 MB
-    Driver:          32.0.15.6590
+    Renderer:        AMD Radeon RX 6800S (ID=0x73ef)
+    Vendor:          ATI
+    VRAM:            8146 MB
+    App VRAM Budget: 7378 MB
+    Driver:          32.0.21045.5002
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56988
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001701 seconds.
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.3'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-ALUMNOS"
-[Licensing::IpcConnector] LicenseClient-ALUMNOS channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-ALUMNOS-6000.6.0" at "2026-09-21T16:23:25.093365Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 31148, path: "C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
-[Licensing::Module] LicensingClient has failed validation; ignoring
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.3+d7ffd15
-  Session Id:              7ec51d24be744deebacde23d17ce107c
-  Correlation Id:          f4b69dcb2b71afc42d38c2f1e53a0b69
-  External correlation Id: 6479664907297855213
-  Machine Id:              40UgVQrz1fkwWDhtNn0/Xoc4+KU=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-ALUMNOS-6000.6.0" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-ALUMNOS-6000.6.0-notifications" at "2026-09-21T16:23:25.1016266Z"
-[Licensing::Module] Licensing Background thread has ended after 1.30s
+Registered in 0.002763 seconds.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -163,27 +155,32 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  0.722 seconds
-Domain Reload Profiling: 1568ms
-	BeginReloadAssembly (197ms)
-	RebuildCommonClasses (9ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (102ms)
-	LoadAllAssembliesAndSetupDomain (511ms)
-		LoadAssemblies (193ms)
-		TypeCache.Refresh (348ms)
-			TypeCache.ScanAssembly (326ms)
+- Finished resetting the current domain, in  0.686 seconds
+Domain Reload Profiling: 1462ms
+	BeginReloadAssembly (175ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (98ms)
+	LoadAllAssembliesAndSetupDomain (470ms)
+		LoadAssemblies (169ms)
+		TypeCache.Refresh (312ms)
+			TypeCache.ScanAssembly (290ms)
 		AnalyzeDomain (1ms)
-	FinalizeReload (723ms)
+	FinalizeReload (687ms)
 		SetupLoadedEditorAssemblies (0ms)
 			LogAssemblyErrors (3ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (151ms)
-			ProcessInitializeOnLoadAttributes (162ms)
-			ProcessInitializeOnLoadMethodAttributes (264ms)
+			BeforeProcessingInitializeOnLoad (145ms)
+			ProcessInitializeOnLoadAttributes (141ms)
+			ProcessInitializeOnLoadMethodAttributes (255ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Initializing Unity extensions:
 [Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-Q75W-G8CW-QZK8-28CR-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
 [Licensing::Module] License group:
   Id: 6872860262671-UnityPersXXXX
   Product: Unity Personal
@@ -201,7 +198,7 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.39 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.33 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
@@ -214,48 +211,140 @@ Native extension for WindowsStandalone target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  1.074 seconds
-Domain Reload Profiling: 2470ms
-	BeginReloadAssembly (315ms)
-		DisableScriptedObjects (11ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (11ms)
-	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (86ms)
-	LoadAllAssembliesAndSetupDomain (959ms)
-		LoadAssemblies (511ms)
-		TypeCache.Refresh (282ms)
-			TypeCache.ScanAssembly (263ms)
-		AnalyzeDomain (121ms)
-			BuildScriptInfoCaches (107ms)
+- Finished resetting the current domain, in  1.352 seconds
+Domain Reload Profiling: 3164ms
+	BeginReloadAssembly (386ms)
+		DisableScriptedObjects (17ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (30ms)
+	initialDomainReloadingComplete (117ms)
+	LoadAllAssembliesAndSetupDomain (1260ms)
+		LoadAssemblies (627ms)
+		TypeCache.Refresh (396ms)
+			TypeCache.ScanAssembly (372ms)
+		AnalyzeDomain (136ms)
+			BuildScriptInfoCaches (123ms)
 			ResolveRequiredComponents (10ms)
-	FinalizeReload (1075ms)
+	FinalizeReload (1354ms)
 		SetupLoadedEditorAssemblies (0ms)
 			LogAssemblyErrors (3ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (154ms)
-			ProcessInitializeOnLoadAttributes (409ms)
-			ProcessInitializeOnLoadMethodAttributes (120ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (211ms)
+			ProcessInitializeOnLoadAttributes (542ms)
+			ProcessInitializeOnLoadMethodAttributes (121ms)
+			AfterProcessingInitializeOnLoad (13ms)
 		AwakeInstancesAfterBackupRestoration (11ms)
 AcceleratorClientConnectionCallback - disconnected - :0
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 3.55 ms, found 4 plugins.
 Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7742 unused Assets / (9.6 MB). Loaded Objects now: 8717.
-Memory consumption went from 367.8 MB to 358.2 MB.
-Total: 13.230900 ms (FindLiveObjects: 1.912300 ms CreateObjectMapping: 0.637200 ms MarkObjects: 7.437000 ms  DeleteObjects: 2.689000 ms)
+Unloading 7742 unused Assets / (6.3 MB). Loaded Objects now: 8724.
+Memory consumption went from 374.0 MB to 367.7 MB.
+Total: 14.951800 ms (FindLiveObjects: 1.471400 ms CreateObjectMapping: 0.998600 ms MarkObjects: 9.736900 ms  DeleteObjects: 2.451900 ms)
 
 ========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
-Refreshing native plugins compatible for Editor in 2.67 ms, found 4 plugins.
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: F4-Q75W-G8CW-QZK8-28CR-XXXX
+  Product: Unity Personal
+  Type: ULF
+  Expiration: Unlimited
+[Licensing::Module] License group:
+  Id: 6872860262671-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Begin MonoManager ReloadAssembly
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.62 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.364 seconds
+Domain Reload Profiling: 4942ms
+	BeginReloadAssembly (731ms)
+		DisableScriptedObjects (20ms)
+		CreateAndSetChildDomain (128ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (133ms)
+	initialDomainReloadingComplete (117ms)
+	LoadAllAssembliesAndSetupDomain (2577ms)
+		LoadAssemblies (2745ms)
+		TypeCache.Refresh (9ms)
+		AnalyzeDomain (14ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1366ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (155ms)
+			ProcessInitializeOnLoadAttributes (384ms)
+			ProcessInitializeOnLoadMethodAttributes (116ms)
+			AfterProcessingInitializeOnLoad (12ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Refreshing native plugins compatible for Editor in 2.89 ms, found 4 plugins.
 Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 15 unused Assets / (3.5 MB). Loaded Objects now: 8717.
-Memory consumption went from 359.8 MB to 356.3 MB.
-Total: 12.328500 ms (FindLiveObjects: 1.345200 ms CreateObjectMapping: 0.334000 ms MarkObjects: 9.716700 ms  DeleteObjects: 0.476700 ms)
+Unloading 7740 unused Assets / (7.8 MB). Loaded Objects now: 8778.
+Memory consumption went from 375.8 MB to 368.0 MB.
+Total: 11.909100 ms (FindLiveObjects: 1.213300 ms CreateObjectMapping: 0.515300 ms MarkObjects: 7.680100 ms  DeleteObjects: 2.203400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-Editor requested this worker to shutdown with reason: Editor is closing down
+========================================================================
+Received Import Request.
+  Time of request: 2026-09-22T12:27:32.5246302Z
+  Time since last request: 1483.25008509999998 seconds.
+  importAddress: GUID: 0d656a9f7ff4e694886fe42977061c15 - Path: Assets/Assets/Dash_assets/Characters/BODY_normal.png - Importer: PreviewImporter
+Importing 'GUID: 0d656a9f7ff4e694886fe42977061c15 - Path: Assets/Assets/Dash_assets/Characters/BODY_normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 0d656a9f7ff4e694886fe42977061c15' -> (Import Result ID: '336eeabe007ab80ce44b214ddec13494') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a9e54560b78e0eef7fa3d6548f8f8c2a DependenciesID=e389b781ed15076f9855e58c2b09f8c3 StaticDependenciesID=4b072f9c348cc770cf4d90d8cf23aada 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-09-22T12:27:32.6710238Z
+  Time since last request: 0.0014355 seconds.
+  importAddress: GUID: cfafc908f50e2954cb9d4c25479a2676 - Path: Assets/Assets/Dash_assets/Characters/Exo Gray@Breathing Idle.fbx - Importer: PreviewImporter
+Importing 'GUID: cfafc908f50e2954cb9d4c25479a2676 - Path: Assets/Assets/Dash_assets/Characters/Exo Gray@Breathing Idle.fbx - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: cfafc908f50e2954cb9d4c25479a2676' -> (Import Result ID: '0dc3e2be07e71a99ff59459a91bea4f8') in 1.300 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=785dec3dd8e70b63eeb1035f6f403b63 DependenciesID=7369242e3b2959f15ed26b25beeb4617 StaticDependenciesID=1f99034e2a5c4a77f654dac8f1d01134 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 275
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Refreshing native plugins compatible for Editor in 4.10 ms, found 4 plugins.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (3.4 MB). Loaded Objects now: 8949.
+Memory consumption went from 401.5 MB to 398.1 MB.
+Total: 18.189700 ms (FindLiveObjects: 1.318700 ms CreateObjectMapping: 0.731600 ms MarkObjects: 14.415000 ms  DeleteObjects: 1.353500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Refreshing native plugins compatible for Editor in 3.38 ms, found 4 plugins.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (3.4 MB). Loaded Objects now: 8949.
+Memory consumption went from 406.5 MB to 403.1 MB.
+Total: 13.693200 ms (FindLiveObjects: 1.007300 ms CreateObjectMapping: 0.331400 ms MarkObjects: 10.824400 ms  DeleteObjects: 1.100400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AcceleratorClientConnectionCallback - disconnected - :0
 AssetImportWorker is now disconnected from the server
 Process exiting

@@ -8,6 +8,8 @@ public class EntradasInput : MonoBehaviour
     public GameObject grenadePrefab;
     public Transform throwPoint;
 
+    public Vector2 inputMovimiento;
+
     [Header("Throw Settings")]
     public float forwardForce = 15f;
     public float upwardForce = 3f;
