@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Guardamos el CharacterController una sola vez para no buscarlo cada frame.
         CharacterController = GetComponent<CharacterController>();
-
+        _saltoyGravedadPlayer = GetComponent<SaltoyGravedadPlayer>();
         _inputControles = GetComponent<EntradasInput>();
     }
 

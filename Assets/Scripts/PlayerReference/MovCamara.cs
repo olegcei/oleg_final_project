@@ -8,13 +8,13 @@ public class MovCamara : MonoBehaviour
     [SerializeField] private float _limiteCamara;
     private float _rotacionVertical;
 
-    private InputsPersonaje _inputRaton;
+    private EntradasInput _inputRaton;
 
     private void Awake()
     {
         //Application.targetFrameRate = 60;
         //LimitarCursor();
-        _inputRaton = GetComponent<InputsPersonaje>();
+        _inputRaton = GetComponent<EntradasInput>();
         _camara = FindAnyObjectByType<Camera>();
     }
 
