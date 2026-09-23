@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using System.Collections;
 
 
 public class EntradasInput : MonoBehaviour
@@ -61,6 +62,13 @@ public class EntradasInput : MonoBehaviour
 
     public void ThrowGrenade()
     {
+        StartCoroutine(ThrowGrenadeAfterDelay(1f));
+    }
+
+    private IEnumerator ThrowGrenadeAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
         GameObject grenade = Instantiate(grenadePrefab, throwPoint.position, throwPoint.rotation);
         Rigidbody rb = grenade.GetComponent<Rigidbody>();
 

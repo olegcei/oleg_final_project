@@ -18,7 +18,7 @@ public class RayosPersonaje : MonoBehaviour
     //Detectar y emparentar plataforma
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag == "Plataforma")
+        if (hit.gameObject.tag == "Floor")
         {
             this.transform.parent = hit.transform;
         }

@@ -1362,9 +1362,9 @@ GameObject:
   - component: {fileID: 386788448}
   - component: {fileID: 386788447}
   - component: {fileID: 386788446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Terrain
-  m_TagString: Plataforma
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2349,13 +2349,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724238384}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10539634, y: 0, z: 0, w: 0.9944303}
-  m_LocalPosition: {x: 0, y: 1.76, z: 0.01}
+  m_LocalRotation: {x: 0.18223555, y: 0, z: 0, w: 0.9832549}
+  m_LocalPosition: {x: 0, y: 2.21, z: -1.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450652426056148}
-  m_LocalEulerAnglesHint: {x: 12.1, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 21, y: 0, z: 0}
 --- !u!1 &725942353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,6 +3207,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 540b79864b7cee34693834798b658b22, type: 3}
+--- !u!1 &921937874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 921937875}
+  m_Layer: 7
+  m_Name: GrenadeThrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &921937875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921937874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.29, y: 0.808, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450652426056148}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &925918147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4675,7 +4706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntradasInput
   grenadePrefab: {fileID: 3075708955099010101, guid: f642de656712d0f46adcd2d36539f563, type: 3}
-  throwPoint: {fileID: 0}
+  throwPoint: {fileID: 921937875}
   inputMovimiento: {x: 0, y: 0}
   inputCamara: {x: 0, y: 0}
   forwardForce: 15
@@ -6213,19 +6244,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 556395178828428419b679e97c1a598f, type: 3}
   m_PrefabInstance: {fileID: 1960616532}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1985774919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147997197261}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64f8f8e65801152409c4e6e6e84f09c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorController
-  animator: {fileID: 5866666019846505229}
 --- !u!1001 &2004802447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7153,13 +7171,14 @@ Transform:
   m_GameObject: {fileID: 919132148156296046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 0, z: 0}
+  m_LocalPosition: {x: 1.78, y: 0, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 724238389}
   - {fileID: 543450651669272951}
   - {fileID: 11811977}
+  - {fileID: 921937875}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &546209302458271422
@@ -7265,7 +7284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651669272951}
   - component: {fileID: 5866666019846505229}
-  - component: {fileID: 1985774919}
+  - component: {fileID: 5866666019846505230}
   m_Layer: 0
   m_Name: Exo Gray@Breathing Idle
   m_TagString: Untagged
@@ -7292,6 +7311,7 @@ GameObject:
   - component: {fileID: 919132148156296049}
   - component: {fileID: 919132148156296048}
   - component: {fileID: 919132148156296050}
+  - component: {fileID: 919132148156296051}
   m_Layer: 7
   m_Name: character_test
   m_TagString: Player
@@ -7311,8 +7331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6da8cbc23d2884b909bb405a2500a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaltoyGravedadPlayer
-  _saltosMaximos: 2
-  _gravedad: 20
+  _saltosMaximos: 1
+  _gravedad: 10
   _limiteEjeY: -20
   ejeY: 0
   coyoteTimeCounter: 0
@@ -7346,6 +7366,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MovCamara
   _sensibilidad: 10
   _limiteCamara: 75
+--- !u!114 &919132148156296051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148156296046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0c4713051a2c6418c5238c15ae4571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
 --- !u!1 &927016744204928532
 GameObject:
   m_ObjectHideFlags: 0
@@ -10346,15 +10378,28 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 208277a6ac8e15748851c0db077e5523, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that are already bound by a Humanoid avatar. These transforms can only be changed by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform 'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'Slow Run'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5866666019846505230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147997197261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f8f8e65801152409c4e6e6e84f09c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorController
+  animator: {fileID: 0}
 --- !u!1 &5880010418133366875
 GameObject:
   m_ObjectHideFlags: 0
