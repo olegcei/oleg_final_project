@@ -18,9 +18,24 @@ public class MovCamara : MonoBehaviour
         _camara = FindAnyObjectByType<Camera>();
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Debug.Log("Cursor lock applied: " + Cursor.lockState);
+    }
+
+    private void LimitarCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     private void Update()
     {
         GiroCabeza();
+        LimitarCursor();
+    
     }
 
     //Calcula y gira al player y la camara
@@ -36,10 +51,9 @@ public class MovCamara : MonoBehaviour
         _camara.transform.localRotation = Quaternion.Euler(_rotacionVertical, 0, 0);
     }
 
-    //Bloquea y hace invisible el cursur del raton
-    private void LimitarCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+
+
+
+
+
 }

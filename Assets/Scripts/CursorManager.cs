@@ -17,4 +17,15 @@ public class CursorManager : MonoBehaviour
             Cursor.visible = true;
         }
     }
+
+
+
+    private void HabilitarCursor()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
 }
