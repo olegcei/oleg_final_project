@@ -11,8 +11,9 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] GameObject Contenedor1;
 
     Color c;
-    bool final;
-    bool startGame; 
+    bool options;
+    bool startGame;
+    bool exitGame;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -25,7 +26,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void MenuStart()
     {
-        final = true;
+        options = true;
         StartCoroutine(FadeOut());
 
     }
@@ -34,6 +35,12 @@ public class MenuPrincipal : MonoBehaviour
     {
         startGame = true;
         StartCoroutine (FadeOut());
+    }
+
+    public void Exit()
+    {
+        exitGame = true;
+        if (exitGame) Application.Quit();
     }
 
     // Update is called once per frame
@@ -62,8 +69,11 @@ public class MenuPrincipal : MonoBehaviour
         c.a = 1f;
         panelFade.gameObject.GetComponent<Image>().color = c;
         yield return new WaitForSeconds(0.00001f);
-        if (final) SceneManager.LoadScene("Options");
-        if (startGame) SceneManager.LoadScene("level");
+        if (options) SceneManager.LoadScene("Options");
+        if (startGame) SceneManager.LoadScene("MineShaft");
+        
 
     }
+
+
 }

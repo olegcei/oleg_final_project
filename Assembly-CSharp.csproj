@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretProjectile.cs" />
     <Compile Include="Assets\Scripts\PlayerReference\MovCamara.cs" />
+    <Compile Include="Assets\Scripts\Menu\Options.cs" />
     <Compile Include="Assets\Scripts\repaso clase\Enemigos\IaEnemigo.cs" />
   </ItemGroup>
   <ItemGroup>
