@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MovCamara : MonoBehaviour
@@ -35,8 +36,10 @@ public class MovCamara : MonoBehaviour
     {
         GiroCabeza();
         LimitarCursor();
-    
+        
     }
+
+
 
     //Calcula y gira al player y la camara
     private void GiroCabeza()
@@ -50,10 +53,4 @@ public class MovCamara : MonoBehaviour
         _rotacionVertical = Mathf.Clamp(_rotacionVertical, -_limiteCamara, _limiteCamara);
         _camara.transform.localRotation = Quaternion.Euler(_rotacionVertical, 0, 0);
     }
-
-
-
-
-
-
 }

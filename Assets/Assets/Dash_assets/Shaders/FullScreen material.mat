@@ -42,7 +42,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BreatheFrequency: 0.91
-    - _BreatheIntensity: 0.39
+    - _BreatheIntensity: 1.02
     - _Fullscreen_AlphaBlendOperation: 0
     - _Fullscreen_BlendMode: 1
     - _Fullscreen_ColorBlendOperation: 0
@@ -51,8 +51,8 @@ Material:
     - _Fullscreen_DstColorBlend: 10
     - _Fullscreen_SrcAlphaBlend: 1
     - _Fullscreen_SrcColorBlend: 5
-    - _VignetteIntensity: 2.88
-    - _VignettePower: 4.99
+    - _VignetteIntensity: 6.18
+    - _VignettePower: 5.53
     m_Colors:
     - _Color: {r: 2.709454, g: 3.5204473, b: 3.5204473, a: 1}
     - _NoiseSpeed: {r: 0, g: 0.02, b: 0, a: 0}
