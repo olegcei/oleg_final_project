@@ -918,6 +918,7 @@ GameObject:
   - component: {fileID: 1524450599}
   - component: {fileID: 1524450601}
   - component: {fileID: 1524450600}
+  - component: {fileID: 1524450602}
   m_Layer: 5
   m_Name: VOLUME
   m_TagString: Untagged
@@ -1045,6 +1046,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524450598}
   m_CullTransparentMesh: 1
+--- !u!114 &1524450602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524450598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d1cb896b350d14b9f1d788867245ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  volumeSlider: {fileID: 911893339}
+  musicSource: {fileID: 0}
 --- !u!1 &1571531498
 GameObject:
   m_ObjectHideFlags: 0

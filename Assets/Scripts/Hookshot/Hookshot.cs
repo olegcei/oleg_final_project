@@ -9,6 +9,7 @@ public class Hookshot : MonoBehaviour
     public CharacterController controller; // CHANGED - no more Rigidbody
     public PlayerMovement playerMovement;  // NEW - to disable it while hooking
     public EntradasInput input;
+    public Animator animator;
 
     [Header("Settings")]
     public float maxHookDistance = 25f;
@@ -19,6 +20,7 @@ public class Hookshot : MonoBehaviour
 
     private Vector3 hookPoint;
     private bool isHooking = false;
+    public bool IsHooking => isHooking;
 
     void OnEnable()
     {
@@ -65,6 +67,7 @@ public class Hookshot : MonoBehaviour
                 isHooking = true;
                 lineRenderer.enabled = true;
                 playerMovement.enabled = false; // NEW - stop normal movement fighting the pull
+                animator.SetTrigger("HookshotTrigger");
             }
         }
     }

@@ -55,12 +55,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Menu\Menu principal.cs" />
     <Compile Include="Assets\Scripts\Menu\MovingPanel.cs" />
+    <Compile Include="Assets\Scripts\PathMaskBaker.cs" />
     <Compile Include="Assets\Scripts\PlayerReference\MovPersonaje.cs" />
+    <Compile Include="Assets\Scripts\UI\CursorManager.cs" />
     <Compile Include="Assets\Scripts\PlayerReference\InputsPersonaje.cs" />
     <Compile Include="Assets\Scripts\Grenade\GrenadeLanding.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretController.cs" />
+    <Compile Include="Assets\Scripts\Grenade\SmokeVFX.cs" />
     <Compile Include="Assets\Scripts\Guardado_encriptado_2026\GameManager.cs" />
-    <Compile Include="Assets\Scripts\BloodSplatter.cs" />
+    <Compile Include="Assets\Scripts\LoadSceneOnTrigger.cs" />
     <Compile Include="Assets\Scripts\Torreta\DecalAutoDestroy.cs" />
     <Compile Include="Assets\Scripts\Player\SaltoyGravedadPlayer.cs" />
     <Compile Include="Assets\Scripts\Guardado_encriptado_2026\PlayerControl.cs" />
@@ -69,15 +72,17 @@
     <Compile Include="Assets\Scripts\PlayerAnimatorController.cs" />
     <Compile Include="Assets\Scripts\Guardado_encriptado_2026\SaveData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\SmokeVFX.cs" />
-    <Compile Include="Assets\Scripts\CursorManager.cs" />
+    <Compile Include="Assets\Scripts\UI\BloodSplatter.cs" />
     <Compile Include="Assets\Scripts\Player\EntradasInput.cs" />
+    <Compile Include="Assets\Scripts\FullScreenEffectController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Guardado_encriptado_2026\SaveLoadMethods.cs" />
+    <Compile Include="Assets\Scripts\Sound\VolumeControl.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerJump.cs" />
     <Compile Include="Assets\Scripts\Hookshot\Hookshot.cs" />
     <Compile Include="Assets\Scripts\Escenario\PlataformasMoviles.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Sound\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretProjectile.cs" />
     <Compile Include="Assets\Scripts\PlayerReference\MovCamara.cs" />
     <Compile Include="Assets\Scripts\Menu\Options.cs" />
