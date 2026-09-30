@@ -1,17 +1,26 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class FpsCounter : MonoBehaviour
 {
+    private const string PrefKey = "FpsCounterEnabled";
+    private static FpsCounter instance;
+
     [Header("UI References")]
-    [SerializeField] private TMP_Text fpsText;      // Text that displays the FPS
-    [SerializeField] private Button toggleButton;   // Button that toggles the counter
-    [SerializeField] private TMP_Text buttonLabel;  // Optional: label on the button
+    [SerializeField] private Canvas canvas;         // The canvas this script sits on
+    [SerializeField] private TMP_Text fpsText;
+    [SerializeField] private Toggle toggle;
+    [SerializeField] private TMP_Text toggleLabel;  // Optional
 
     [Header("Settings")]
-    [SerializeField] private float updateInterval = 0.5f; // Seconds between text refreshes
-    [SerializeField] private bool startActive = true;
+    [SerializeField] private float updateInterval = 0.5f;
+
+    [Header("World Space canvas only")]
+    [SerializeField] private bool followCamera = false;
+    [SerializeField] private Vector3 cameraOffset = new Vector3(0f, 0f, 1f);
 
     private bool isActive;
     private float accumulatedTime;
@@ -19,26 +28,86 @@ public class FpsCounter : MonoBehaviour
 
     private void Awake()
     {
-        if (toggleButton != null)
-            toggleButton.onClick.AddListener(Toggle);
+        // If a copy already exists (e.g. the prefab is also placed in another scene), remove this one
+        if (instance != null && instance != this)
+        {
+            Destroy(transform.root.gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(transform.root.gameObject); // must be a root object
+
+        if (canvas == null) canvas = GetComponentInParent<Canvas>();
+
+        if (toggle != null)
+            toggle.onValueChanged.AddListener(OnToggleChanged);
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Start()
     {
-        SetActive(startActive);
+        if (instance != this) return;
+
+        bool defaultState = toggle != null && toggle.isOn;
+        bool saved = PlayerPrefs.GetInt(PrefKey, defaultState ? 1 : 0) == 1;
+
+        if (toggle != null)
+            toggle.SetIsOnWithoutNotify(saved);
+
+        Apply(saved);
+        RefreshCamera();
     }
 
     private void OnDestroy()
     {
-        if (toggleButton != null)
-            toggleButton.onClick.RemoveListener(Toggle);
+        if (instance != this) return;
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (toggle != null)
+            toggle.onValueChanged.RemoveListener(OnToggleChanged);
+        instance = null;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        RefreshCamera();
+
+        if (EventSystem.current == null)
+            Debug.LogWarning("FpsCounter: no EventSystem in this scene, the toggle won't respond to clicks.");
+    }
+
+    private void RefreshCamera()
+    {
+        if (canvas == null) return;
+
+        Camera cam = Camera.main;
+        if (cam == null) return;
+
+        // Only needed for World Space / Screen Space - Camera canvases
+        if (canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+            canvas.worldCamera = cam;
+    }
+
+    private void LateUpdate()
+    {
+        if (instance != this) return;
+
+        if (followCamera && canvas != null && canvas.renderMode == RenderMode.WorldSpace)
+        {
+            Camera cam = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
+            if (cam != null)
+                transform.root.SetPositionAndRotation(
+                    cam.transform.TransformPoint(cameraOffset),
+                    cam.transform.rotation);
+        }
     }
 
     private void Update()
     {
-        if (!isActive) return;
+        if (instance != this || !isActive) return;
 
-        // Unscaled so the counter stays accurate when Time.timeScale is 0 or changed
         accumulatedTime += Time.unscaledDeltaTime;
         frameCount++;
 
@@ -53,22 +122,22 @@ public class FpsCounter : MonoBehaviour
         }
     }
 
-    public void Toggle()
+    private void OnToggleChanged(bool value)
     {
-        SetActive(!isActive);
+        PlayerPrefs.SetInt(PrefKey, value ? 1 : 0);
+        Apply(value);
     }
 
-    public void SetActive(bool value)
+    private void Apply(bool value)
     {
         isActive = value;
 
         if (fpsText != null)
             fpsText.gameObject.SetActive(isActive);
 
-        if (buttonLabel != null)
-            buttonLabel.text = isActive ? "FPS: ON" : "FPS: OFF";
+        if (toggleLabel != null)
+            toggleLabel.text = isActive ? "FPS: ON" : "FPS: OFF";
 
-        // Reset the averaging window so the first reading after re-enabling is clean
         accumulatedTime = 0f;
         frameCount = 0;
     }
