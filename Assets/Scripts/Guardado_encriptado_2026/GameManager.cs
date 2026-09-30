@@ -36,7 +36,11 @@ public class GameManager : MonoBehaviour
         //Se actualiza la variable con los datos guardados
         ph.currentHealth = saveData.vida;
 
-        pp.playerPos = new Vector3(saveData.positionPlayer[0], saveData.positionPlayer[1], saveData.positionPlayer[2]);
+        Vector3 savedPos = new Vector3(saveData.positionPlayer[0], saveData.positionPlayer[1], saveData.positionPlayer[2]);
+
+        ph.maxHealth = saveData.vida;
+        pp.playerPos = savedPos;
+        pp.transform.position = savedPos;
 
         Debug.Log("Datos cargados");
         Debug.Log("La vida actual es: " + ph.currentHealth);
@@ -44,12 +48,20 @@ public class GameManager : MonoBehaviour
         Debug.Log("Level: " + pp.level);
     }
 
+    public void Save()
+    {
+        Save(pp.transform.position);
+    }
 
-    //public void Save(Vector3 respawnPosition)
-    //{
-    //    pp.playerPos = respawnPosition;
-    //    Save();
-    //}
+    public void Save(Vector3 respawnPosition)
+    {
+        //pp.playerPos = respawnPosition;
+        //Save();
+        pp.playerPos = respawnPosition;
+
+        SaveLoadMethods.SaveAllData(pp, ph);
+        Debug.Log("Datos guardados en: " + pp.playerPos);
+    }
 
     [ContextMenu("Delete save file")]
     void DeleteSaveFile()

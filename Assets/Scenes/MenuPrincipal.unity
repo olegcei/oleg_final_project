@@ -1284,6 +1284,7 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: e8827afe71bb59847994fd4d6a3998a2, type: 3}
   movementThreshold: 3
   sceneToLoad: 
+  deleteSaveOnClick: 0
 --- !u!61 &505669635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1874,6 +1875,7 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: e8827afe71bb59847994fd4d6a3998a2, type: 3}
   movementThreshold: 3
   sceneToLoad: options
+  deleteSaveOnClick: 0
 --- !u!61 &823329056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3075,6 +3077,7 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: e8827afe71bb59847994fd4d6a3998a2, type: 3}
   movementThreshold: 3
   sceneToLoad: MineShaft
+  deleteSaveOnClick: 1
 --- !u!1 &1936894700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,7 +3133,8 @@ MonoBehaviour:
   hoverSound: {fileID: 8300000, guid: 7d12b539a14b236409d241ee366a39f5, type: 3}
   clickSound: {fileID: 8300000, guid: e8827afe71bb59847994fd4d6a3998a2, type: 3}
   movementThreshold: 3
-  sceneToLoad: 
+  sceneToLoad: MineShaft
+  deleteSaveOnClick: 0
 --- !u!61 &1936894703
 BoxCollider2D:
   m_ObjectHideFlags: 0

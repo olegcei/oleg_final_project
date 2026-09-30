@@ -21,23 +21,27 @@ public class MovCamara : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        Debug.Log("Cursor lock applied: " + Cursor.lockState);
+        LimitarCursor();
     }
 
     private void LimitarCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        
     }
 
     private void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         GiroCabeza();
         LimitarCursor();
-        
+
+
     }
+
+
 
 
 

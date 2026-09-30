@@ -13,15 +13,6 @@ public class SavePoint : MonoBehaviour
     private bool playerInRange;
     private Coroutine messageRoutine;
 
-    PlayerHealth ph;
-    PlayerPosition pp;
-
-    private void Awake()
-    {
-        ph = FindAnyObjectByType<PlayerHealth>();
-        pp = FindAnyObjectByType<PlayerPosition>();
-    }
-
     private void Start()
     {
         if (promptUI != null) promptUI.SetActive(false);
@@ -49,7 +40,11 @@ public class SavePoint : MonoBehaviour
         Keyboard kb = Keyboard.current;
         if (kb != null && kb.eKey.wasPressedThisFrame)
         {
-            Save(pp, ph);
+            if (respawnPoint != null)
+                gm.Save(respawnPoint.position);
+            else
+                gm.Save();
+
             ShowSavedMessage();
         }
     }
@@ -69,12 +64,5 @@ public class SavePoint : MonoBehaviour
         yield return new WaitForSeconds(messageDuration);
         savedMessageUI.SetActive(false);
         messageRoutine = null;
-    }
-
-    void Save(PlayerPosition pp, PlayerHealth ph)
-    {
-        //Se accede al metodo "SaveAllData()" de la clase "SaveLoadMethods" para guardar los datos de juego
-        SaveLoadMethods.SaveAllData(pp, ph);
-        Debug.Log("Datos guardados");
     }
 }

@@ -46,6 +46,8 @@ public static class SaveLoadMethods
     }
 
 
+
+
     // Método para borrar fichero de guardado
     public static void DeleteSaveData()
     {
@@ -60,6 +62,11 @@ public static class SaveLoadMethods
         {
             Debug.LogWarning("No existe ningún archivo de guardado para eliminar");
         }
+    }
+
+    public static bool HasSaveData()
+    {
+        return File.Exists(Application.persistentDataPath + "/savedata.save");
     }
 
     // Encriptación AES

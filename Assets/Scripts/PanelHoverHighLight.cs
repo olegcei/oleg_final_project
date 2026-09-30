@@ -13,6 +13,7 @@ public class PanelHoverHighlight : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private AudioClip clickSound;
     [SerializeField] private float movementThreshold = 3f;
     [SerializeField] private string sceneToLoad;
+    [SerializeField] private bool deleteSaveOnClick;
 
     private static bool isFirstSceneLoad = true;
 
@@ -66,6 +67,9 @@ public class PanelHoverHighlight : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if (SfxPlayer.instance != null)
             SfxPlayer.instance.PlayOneShot(clickSound);
+
+        if (deleteSaveOnClick)
+            SaveLoadMethods.DeleteSaveData();
 
         if (!string.IsNullOrEmpty(sceneToLoad))
             SceneManager.LoadScene(sceneToLoad);

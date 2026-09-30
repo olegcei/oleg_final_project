@@ -15,9 +15,9 @@ public class PlayerPosition : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.position = playerPos;
+        //transform.position = playerPos;
 
-        transform.position = new Vector3(28, -1, 35);
+        //transform.position = new Vector3(28, -1, 35);
     }
 
     // Update is called once per frame

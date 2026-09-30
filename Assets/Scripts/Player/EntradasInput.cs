@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Events;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class EntradasInput : MonoBehaviour
@@ -26,6 +27,10 @@ public class EntradasInput : MonoBehaviour
     public event UnityAction OnHookshotPressed;
     public event UnityAction OnHookshotReleased;
 
+    [SerializeField]
+    private string optionsSceneName = "options_pop_up";
+    private bool optionsOpen;
+
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -39,6 +44,8 @@ public class EntradasInput : MonoBehaviour
         //Lectura de entrada de los input para mover al player y girar la camara
         inputMovimiento = playerInput.actions["Move"].ReadValue<Vector2>();
         inputCamara = playerInput.actions["Look"].ReadValue<Vector2>();
+
+        HandleInput();
     }
 
 
@@ -106,5 +113,41 @@ public class EntradasInput : MonoBehaviour
                 break;
         }
     }
+
+    private void HandleInput()
+    {
+        // ...your existing input code...
+
+        if (Keyboard.current != null && Keyboard.current.nKey.wasPressedThisFrame)
+        {
+            ToggleOptions();
+        }
+    }
+
+    private void ToggleOptions()
+    {
+        if (!optionsOpen)
+        {
+            SceneManager.LoadScene(optionsSceneName, LoadSceneMode.Additive);
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            optionsOpen = true;
+        }
+        else
+        {
+            SceneManager.UnloadSceneAsync(optionsSceneName);
+            Time.timeScale = 1f;
+            // re-lock the cursor here if your game uses a locked cursor
+            optionsOpen = false;
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (Time.timeScale == 0f)
+            Debug.Log($"lock={Cursor.lockState} visible={Cursor.visible}");
+    }
+
 
 }
