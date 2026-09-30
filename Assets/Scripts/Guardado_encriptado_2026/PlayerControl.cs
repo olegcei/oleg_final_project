@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public Vector3 playerPosition;
-    public int vida;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +15,6 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         Debug.Log(transform.position);
-        Debug.Log(vida);
+
     }
 }

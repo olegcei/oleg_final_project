@@ -5253,7 +5253,7 @@ MonoBehaviour:
   destroyOnDeath: 0
   currentHealth: 0
   isDead: 0
-  bloodUI: {fileID: 0}
+  bloodUI: {fileID: 1132963220}
 --- !u!64 &1283842777
 MeshCollider:
   m_ObjectHideFlags: 0
