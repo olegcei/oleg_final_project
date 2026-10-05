@@ -1285,6 +1285,7 @@ MonoBehaviour:
   movementThreshold: 3
   sceneToLoad: 
   deleteSaveOnClick: 0
+  loadSaveOnClick: 0
 --- !u!61 &505669635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1876,6 +1877,7 @@ MonoBehaviour:
   movementThreshold: 3
   sceneToLoad: options
   deleteSaveOnClick: 0
+  loadSaveOnClick: 0
 --- !u!61 &823329056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3078,6 +3080,7 @@ MonoBehaviour:
   movementThreshold: 3
   sceneToLoad: MineShaft
   deleteSaveOnClick: 1
+  loadSaveOnClick: 0
 --- !u!1 &1936894700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,6 +3138,7 @@ MonoBehaviour:
   movementThreshold: 3
   sceneToLoad: MineShaft
   deleteSaveOnClick: 0
+  loadSaveOnClick: 1
 --- !u!61 &1936894703
 BoxCollider2D:
   m_ObjectHideFlags: 0

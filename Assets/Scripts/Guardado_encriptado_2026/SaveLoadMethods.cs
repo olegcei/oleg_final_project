@@ -9,9 +9,9 @@ public static class SaveLoadMethods
     private const string EncryptionKey = "TuClaveSecreta123"; // Clave para encriptar
 
     // Método para guardar con encriptación
-    public static void SaveAllData(PlayerPosition pp, PlayerHealth ph)
+    public static void SaveAllData(PlayerPosition pp, PlayerHealth ph, GameManager gameManager)
     {
-        SaveData saveData = new SaveData(pp, ph);
+        SaveData saveData = new SaveData(pp, ph, gameManager);
         string json = JsonUtility.ToJson(saveData, true);
         string encrypted = EncryptString(json, EncryptionKey);
         string dataPath = Application.persistentDataPath + "/savedata.save";

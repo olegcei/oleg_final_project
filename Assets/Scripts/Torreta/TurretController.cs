@@ -26,6 +26,11 @@ public class TurretController : MonoBehaviour
 
     private float nextShotTime;         // Momento (en segundos de partida) del siguiente disparo.
 
+    public float maxAngle = 10f;
+
+    private Vector3 baseForward;
+    [HideInInspector] public bool playerInZone;
+
     private void Start()
     {
         // Si no hemos asignado la parte giratoria, giramos el objeto completo.
@@ -47,21 +52,15 @@ public class TurretController : MonoBehaviour
 
         // Time.time son los segundos que llevamos de partida.
         nextShotTime = Time.time + firstShotDelay;
+
+        baseForward = rotatingPart.forward;
+        baseForward.y = 0f;
+        baseForward.Normalize();
     }
 
     private void Update()
     {
-        // Sin objetivo (o si el jugador se ha destruido) no hay nada que hacer.
-        if (target == null)
-        {
-            StopAudio();
-            return;
-        }
-
-        // Si el jugador esta demasiado lejos, la torreta ni apunta ni dispara.
-        float distance = Vector3.Distance(transform.position, target.position);
-
-        if (distance > attackRange)
+        if (target == null || !playerInZone)
         {
             StopAudio();
             return;
@@ -69,19 +68,22 @@ public class TurretController : MonoBehaviour
 
         AimAtTarget();
 
-        // Dispara si ya toca por tiempo y si ve al jugador.
-        if (Time.time >= nextShotTime && HasLineOfSight())
+        bool canSee = HasLineOfSight();
+
+        if (!canSee)
+        {
+            StopAudio();
+            return;
+        }
+
+        if (Time.time >= nextShotTime)
         {
             Shoot();
             nextShotTime = Time.time + timeBetweenShots;
         }
-        else if (!HasLineOfSight())
-        {
-            StopAudio();
-        }
     }
 
-    private void StopAudio()
+    public void StopAudio()
     {
         if (audioSource != null && audioSource.isPlaying)
         {
@@ -126,6 +128,16 @@ public class TurretController : MonoBehaviour
 
         // Si el rayo no golpea nada dentro del rango, tampoco hay vision (raro, pero por seguridad).
         return false;
+    }
+
+    private bool IsInsideFiringCone()
+    {
+        Vector3 toTarget = target.position - transform.position;
+        toTarget.y = 0f;
+
+        if (toTarget == Vector3.zero) return false;
+
+        return Vector3.Angle(baseForward, toTarget) <= maxAngle;
     }
 
     // Crea un proyectil en el punto de disparo, mirando hacia donde mira ese punto.

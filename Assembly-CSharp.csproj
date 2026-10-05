@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\PathMaskBaker.cs" />
     <Compile Include="Assets\Scripts\PlayerReference\MovPersonaje.cs" />
     <Compile Include="Assets\Scripts\UI\CursorManager.cs" />
+    <Compile Include="Assets\Scripts\TurretZone.cs" />
     <Compile Include="Assets\Scripts\PlayerReference\InputsPersonaje.cs" />
     <Compile Include="Assets\Scripts\Grenade\GrenadeLanding.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretController.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Scripts\Sound\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerPosition.cs" />
     <Compile Include="Assets\Scripts\PanelTilt.cs" />
+    <Compile Include="Assets\Scripts\GameSession.cs" />
     <Compile Include="Assets\Scripts\Torreta\TurretProjectile.cs" />
     <Compile Include="Assets\Scripts\MenuParallax.cs" />
     <Compile Include="Assets\FPScounter.cs" />

@@ -74,14 +74,18 @@ public class EntradasInput : MonoBehaviour
 
     private IEnumerator ThrowGrenadeAfterDelay(float delay)
     {
+        // Snapshot the direction at press time so turning during the delay doesn't change the throw
+        Vector3 flatForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
+        Vector3 throwDirection = flatForward * forwardForce + Vector3.up * upwardForce;
+
         yield return new WaitForSeconds(delay);
 
-        GameObject grenade = Instantiate(grenadePrefab, throwPoint.position, throwPoint.rotation);
+        GameObject grenade = Instantiate(grenadePrefab, throwPoint.position, Quaternion.identity);
         Rigidbody rb = grenade.GetComponent<Rigidbody>();
-
-        Vector3 throwDirection = throwPoint.forward * forwardForce + throwPoint.up * upwardForce;
         rb.AddForce(throwDirection, ForceMode.VelocityChange);
     }
+
+
 
     public void InputCorrer(InputAction.CallbackContext callbackContext)
     {

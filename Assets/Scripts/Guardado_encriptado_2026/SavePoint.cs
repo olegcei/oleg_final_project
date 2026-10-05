@@ -7,16 +7,17 @@ public class SavePoint : MonoBehaviour
     [SerializeField] private GameManager gm;
     [SerializeField] private GameObject promptUI;
     [SerializeField] private GameObject savedMessageUI;
-    [SerializeField] private float messageDuration = 2f;
+    [SerializeField] private GameObject savedPlane;
+    [SerializeField] private float messageDuration = 5f;
     [SerializeField] private Transform respawnPoint;
 
     private bool playerInRange;
-    private Coroutine messageRoutine;
+    private Coroutine savedRoutine;
 
-    private void Start()
+    private void Awake()
     {
         if (promptUI != null) promptUI.SetActive(false);
-        if (savedMessageUI != null) savedMessageUI.SetActive(false);
+        SetSavedFeedback(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,24 +46,28 @@ public class SavePoint : MonoBehaviour
             else
                 gm.Save();
 
-            ShowSavedMessage();
+            ShowSavedFeedback();
         }
     }
 
-    private void ShowSavedMessage()
+    private void ShowSavedFeedback()
     {
-        if (savedMessageUI == null) return;
-
-        // If the player presses E again, restart the timer instead of stacking timers
-        if (messageRoutine != null) StopCoroutine(messageRoutine);
-        messageRoutine = StartCoroutine(MessageRoutine());
+        // Pressing E again restarts the timer instead of stacking timers
+        if (savedRoutine != null) StopCoroutine(savedRoutine);
+        savedRoutine = StartCoroutine(SavedFeedbackRoutine());
     }
 
-    private IEnumerator MessageRoutine()
+    private IEnumerator SavedFeedbackRoutine()
     {
-        savedMessageUI.SetActive(true);
+        SetSavedFeedback(true);
         yield return new WaitForSeconds(messageDuration);
-        savedMessageUI.SetActive(false);
-        messageRoutine = null;
+        SetSavedFeedback(false);
+        savedRoutine = null;
+    }
+
+    private void SetSavedFeedback(bool active)
+    {
+        if (savedMessageUI != null) savedMessageUI.SetActive(active);
+        if (savedPlane != null) savedPlane.SetActive(active);
     }
 }

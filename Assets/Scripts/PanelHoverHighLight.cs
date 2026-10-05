@@ -14,6 +14,7 @@ public class PanelHoverHighlight : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private float movementThreshold = 3f;
     [SerializeField] private string sceneToLoad;
     [SerializeField] private bool deleteSaveOnClick;
+    [SerializeField] private bool loadSaveOnClick;
 
     private static bool isFirstSceneLoad = true;
 
@@ -22,6 +23,7 @@ public class PanelHoverHighlight : MonoBehaviour, IPointerEnterHandler, IPointer
     private Vector2 initialMousePos;
     private bool suppressUntilMoved;
     private bool hasMouseMoved = false;
+    public int sceneName;
 
     private void Awake()
     {
@@ -71,6 +73,19 @@ public class PanelHoverHighlight : MonoBehaviour, IPointerEnterHandler, IPointer
         if (deleteSaveOnClick)
             SaveLoadMethods.DeleteSaveData();
 
+        if (loadSaveOnClick)
+        {
+            GameSession.LoadSaveOnStart = true;
+
+            SaveData data = SaveLoadMethods.LoadAllData();
+            if (data != null)
+            {
+                SceneManager.LoadScene(GameManager.SceneForLevel(data.level));
+                return;
+            }
+        }
+
+        // Fallback (New Game, other panels, or saves without a scene name)
         if (!string.IsNullOrEmpty(sceneToLoad))
             SceneManager.LoadScene(sceneToLoad);
     }
