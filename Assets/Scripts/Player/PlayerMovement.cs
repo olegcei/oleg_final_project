@@ -16,6 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _direccionXZ;
     private float _velocidadFinal;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _clipsPasos;
+    [SerializeField, Range(0f, 1f)] private float _volumenPasos = 0.6f;
+    [SerializeField] private float _distanciaPorPaso = 2f;
+    private float _distanciaAcumulada;
+
     private void Awake()
     {
         // Guardamos el CharacterController una sola vez para no buscarlo cada frame.
@@ -33,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Movimiento();
+        ReproducirPasos();
+
     }
 
     private void Movimiento()
@@ -47,6 +56,31 @@ public class PlayerMovement : MonoBehaviour
     public void CalcularVelocidad()
     {
         _velocidadFinal = _velocidadBase * multiplicadorAlCorrer;
+    }
+
+    private void ReproducirPasos()
+    {
+        bool seMueve = _inputControles.inputMovimiento.sqrMagnitude > 0.01f;
+
+        if (!CharacterController.isGrounded || !seMueve)
+        {
+            // Al parar, el siguiente paso suena casi al instante cuando vuelves a caminar
+            _distanciaAcumulada = _distanciaPorPaso;
+            return;
+        }
+
+        _distanciaAcumulada += _velocidadFinal * Time.deltaTime;
+
+        if (_distanciaAcumulada >= _distanciaPorPaso)
+        {
+            _distanciaAcumulada = 0f;
+
+            if (_audioSource != null && _clipsPasos != null && _clipsPasos.Length > 0)
+            {
+                AudioClip clip = _clipsPasos[Random.Range(0, _clipsPasos.Length)];
+                _audioSource.PlayOneShot(clip, _volumenPasos);
+            }
+        }
     }
 
 }

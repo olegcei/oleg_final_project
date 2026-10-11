@@ -5,6 +5,7 @@ public class PlayerAnimatorController : MonoBehaviour
 {
     public Animator animator;
     public Hookshot hookshot;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -12,21 +13,23 @@ public class PlayerAnimatorController : MonoBehaviour
 
     void Update()
     {
-        bool isRunning = Keyboard.current.shiftKey.isPressed;
+        var kb = Keyboard.current;
+        if (kb == null) return;
+
+        bool isRunning = kb.shiftKey.isPressed;
         animator.SetBool("isRunning", isRunning);
 
-        bool isWalking = Keyboard.current.wKey.isPressed;
+        bool isWalking = kb.wKey.isPressed || kb.aKey.isPressed ||
+                         kb.sKey.isPressed || kb.dKey.isPressed;
         animator.SetBool("isWalking", isWalking);
 
-        bool isJumping = Keyboard.current.spaceKey.isPressed;
+        bool isJumping = kb.spaceKey.isPressed;
         animator.SetBool("isJumping", isJumping);
 
-        bool isThrowing = Keyboard.current.gKey.isPressed;
+        bool isThrowing = kb.gKey.isPressed;
         animator.SetBool("isThrowing", isThrowing);
 
-        bool isSwinging = hookshot.IsHooking; // CHANGED - reflects actual hook state, not just input
+        bool isSwinging = hookshot.IsHooking; // reflects actual hook state, not just input
         animator.SetBool("isSwinging", isSwinging);
     }
-
-
 }

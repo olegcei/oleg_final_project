@@ -16,6 +16,8 @@ public class VolumeControl : MonoBehaviour
         volumeSlider.value = musicSource.volume;
 
         volumeSlider.onValueChanged.AddListener(SetVolume);
+
+        Debug.Log($"Slider reads: {musicSource.name} in scene {musicSource.gameObject.scene.name}, volume {musicSource.volume}", musicSource);
     }
 
     private void SetVolume(float value)

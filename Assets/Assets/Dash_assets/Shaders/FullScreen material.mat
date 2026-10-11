@@ -54,7 +54,7 @@ Material:
     - _VignetteIntensity: 1.68
     - _VignettePower: 3.05
     m_Colors:
-    - _Color: {r: 0.21244211, g: 0.5849056, b: 0.36986417, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _NoiseSpeed: {r: 0, g: 0.02, b: 0, a: 0}
     - _NoiseTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

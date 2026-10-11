@@ -18,6 +18,11 @@ public class Hookshot : MonoBehaviour
     public string hookableTag = "Hookable";
     public LayerMask hookableMask;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hookshotClip;
+    [SerializeField, Range(0f, 1f)] private float hookshotVolume = 1f;
+
     private Vector3 hookPoint;
     private bool isHooking = false;
     public bool IsHooking => isHooking;
@@ -56,6 +61,10 @@ public class Hookshot : MonoBehaviour
     void TryStartHook()
     {
         Debug.Log("TryStartHook called");
+
+        if (audioSource != null && hookshotClip != null)
+            audioSource.PlayOneShot(hookshotClip, hookshotVolume);
+
         RaycastHit hit;
         if (Physics.Raycast(camTransform.position, camTransform.forward, out hit, maxHookDistance, hookableMask))
         {
